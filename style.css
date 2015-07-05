@@ -1,0 +1,51 @@
+html{
+	height: 100%;
+	width: 100%;
+}
+body{
+	margin: 1px;
+	height: 100%;
+}
+
+#mount{
+	height: 100%;
+}
+
+.app{
+	height: 100%;
+}
+
+.silver{
+	background-color: silver;
+}
+
+.black{
+	background-color: black;
+}
+
+.gray{
+	background-color: gray;
+}
+
+.minute{
+	display: inline-block;
+	margin: 0px 1% 0px 0px;
+	height: 100%;
+	width: 2%;
+	border-radius: 5px;
+}
+
+.row{
+	text-align: center;
+	margin: 0px 1% 0px 0px;
+	padding: 2px 0px;
+	height: 3%;
+}
+
+#modal{
+	height: 100%;
+	width: 100%;
+	position: relative;
+	z-index: 300;
+	opacity: 0.2;
+}
