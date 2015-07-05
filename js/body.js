@@ -12,9 +12,9 @@ var Body = React.createClass({
   }
 });
 
-setInterval(function(){
+// setInterval(function(){
   React.render(
     <Body time={new Date()} />,
     document.getElementById('mount')
   );
-}, 50 );
+// }, 50 );
