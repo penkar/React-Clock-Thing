@@ -1,21 +1,22 @@
 import React from 'react'
 import {render} from 'react-dom';
-import {App} from './components'
+import {App} from './components/nooka'
 
 class Body extends React.Component {
-  render() {
-    var message = 'React has been successfully running for ' + this.props.time + ' seconds.';
-    return (
-      <div id="wrapper" style={{height:'100%'}}>
-        <App time={this.props.time} />
-      </div>
-    )
+  constructor(props) {
+    super(props);
+    this.state = {
+      clock: 'nooka',
+    }
   }
-};
+  render() {
+    return App(new Date());
+  }
+}
 
 setInterval(function(){
   render(
-    App(new Date()),
+    <Body />,
     document.getElementById('mount')
   );
 }, 50 );

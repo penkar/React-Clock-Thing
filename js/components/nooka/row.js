@@ -7,7 +7,7 @@ export function Row({time, row, hours, minutes}) {
     minutesRow.push(Minute({time, row, min, hours, minutes}));
   }
   return (
-    <div className="row" key={row}>
+    <div className="nooka-row" key={row}>
       { minutesRow }
     </div>
   );

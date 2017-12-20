@@ -1,4 +1,4 @@
-html{
+html, #mount{
 	height: 100%;
 	width: 100%;
 }
@@ -7,45 +7,29 @@ body{
 	height: 100%;
 }
 
-#mount{
-	height: 100%;
-}
-
-.app{
-	height: 100%;
-}
-
-.silver{
+.nooka-row .silver{
 	background-color: silver;
 }
 
-.black{
+.nooka-row .black{
 	background-color: black;
 }
 
-.gray{
+.nooka-row .gray{
 	background-color: gray;
 }
 
-.minute{
-	display: inline-block;
-	margin: 0px 1% 0px 0px;
-	height: 100%;
-	width: 2%;
-	border-radius: 5px;
+.nooka-row .minute{
+	margin: 0px;
+	width: 3%;
+	border-radius: 0px;
+  padding: 0.5px;
 }
 
-.row{
-	text-align: center;
-	margin: 0px 1% 0px 0px;
-	padding: 2px 0px;
-	height: 3%;
-}
-
-#modal{
-	height: 100%;
-	width: 100%;
-	position: relative;
-	z-index: 300;
-	opacity: 0.2;
+.nooka-row {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	height: 3.9%;
+	padding-top: 0.1%;
 }

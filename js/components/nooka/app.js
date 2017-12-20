@@ -6,9 +6,5 @@ export function App(time) {
   for(let row = 0; row < 24; row++) {
     rows.push(Row({time, row, hours, minutes}));
   }
-  return (
-    <div className="app">
-      { rows }
-    </div>
-  )
+  return rows
 }
