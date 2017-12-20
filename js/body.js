@@ -1,22 +1,21 @@
-'use strict';
-var App = require('./components/app.js');
-var Modal = require('./components/modal.js');
+import React from 'react'
+import {render} from 'react-dom';
+import {App} from './components'
 
-var Body = React.createClass({
-  render: function(){
+class Body extends React.Component {
+  render() {
     var message = 'React has been successfully running for ' + this.props.time + ' seconds.';
-    var a =[<Modal time={this.props.time}/>]
     return (
       <div id="wrapper" style={{height:'100%'}}>
         <App time={this.props.time} />
       </div>
     )
   }
-});
+};
 
 setInterval(function(){
-  React.render(
-    <Body time={new Date()} />,
+  render(
+    App(new Date()),
     document.getElementById('mount')
   );
 }, 50 );

@@ -1,16 +1,14 @@
-'use strict';
-var Minute = require('./minute.js')
-
-var Row = module.exports = React.createClass({
-  render: function(){
-    var minutes = [];
-    for(var i = 0; i < 30; i++){
-      minutes.push(<Minute key={i} minNum={i} rowNum={this.props.rowNum} time={this.props.time} />)
-    }
-    return (
-      <div className="row">
-        {minutes}
-      </div>
-    )
+import React from 'react';
+import {Minute} from './minute';
+export function Row({time, row, hours, minutes}) {
+  var minutesRow = [];
+  for(let min = 0; min < 30; min++) {
+    // minutes.push(<Minute row={i} minNum={i} rowNum={row} time={time} />);
+    minutesRow.push(Minute({time, row, min, hours, minutes}));
   }
-})
+  return (
+    <div className="row" key={row}>
+      { minutesRow }
+    </div>
+  );
+}

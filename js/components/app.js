@@ -1,16 +1,14 @@
-'use strict';
-var Row = require('./row.js');
+import React from 'react';
+import {Row} from './row';
 
-var App = module.exports = React.createClass({
-  render: function(){
-    var rows = [];
-    for(var i = 0; i < 24; i++){
-      rows.push(<Row key={i} rowNum={i} time={this.props.time}/>);
-    }
-    return(
-      <div className="app">
-        {rows}
-      </div>
-    )
+export function App(time) {
+  var rows = [], hours = time.getHours(), minutes = time.getMinutes();
+  for(let row = 0; row < 24; row++) {
+    rows.push(Row({time, row, hours, minutes}));
   }
-})
+  return (
+    <div className="app">
+      { rows }
+    </div>
+  )
+}
