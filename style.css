@@ -6,30 +6,3 @@ body{
 	margin: 1px;
 	height: 100%;
 }
-
-.nooka-row .silver{
-	background-color: silver;
-}
-
-.nooka-row .black{
-	background-color: black;
-}
-
-.nooka-row .gray{
-	background-color: gray;
-}
-
-.nooka-row .minute{
-	margin: 0px;
-	width: 3%;
-	border-radius: 0px;
-  padding: 0.5px;
-}
-
-.nooka-row {
-	display: flex;
-	justify-content: space-between;
-	flex-direction: row;
-	height: 3.9%;
-	padding-top: 0.1%;
-}

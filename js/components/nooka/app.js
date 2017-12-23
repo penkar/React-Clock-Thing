@@ -1,4 +1,6 @@
 import React from 'react';
+require('./style.scss');
+
 import {Row} from './row';
 
 export function Nooka(time) {

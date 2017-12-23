@@ -1,0 +1,27 @@
+.nooka-row {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 3.9%;
+  padding-top: 0.1%;
+
+  .silver{
+    background-color: silver;
+  }
+
+  .black{
+    background-color: black;
+  }
+
+  .gray{
+    background-color: gray;
+  }
+
+  .minute{
+    margin: 0px;
+    width: 3%;
+    border-radius: 0px;
+    padding: 0.5px;
+  }
+
+}

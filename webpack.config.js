@@ -16,6 +16,10 @@ module.exports = {
       query: {
         presets:['react','es2017','stage-0']
       }
+    },{
+      test:/(\.scss|\.css)$/,
+      exclude:/node_modules/,
+      loaders: ['style-loader', 'css-loader', 'sass-loader']
     }]
   },
   watch: true,
