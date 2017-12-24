@@ -10,6 +10,7 @@ export function Millimetro(time) {
   return (
     <div className='millimetro'>
       { Hour((hours % 12) * 60 * 60 + minutes * 60 + seconds) }
+      { Minute(minutes*60 + seconds) }
     </div>
   )
 }

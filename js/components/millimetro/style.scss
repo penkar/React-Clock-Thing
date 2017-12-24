@@ -1,81 +1,93 @@
 .millimetro {
-  .hours {
+  width: 420px;
+  height: 420px;
+  position: relative;
+  margin: auto;
+
+  .hours, .minutes, .seconds {
+    background-color: white;
     border: solid 1px black;
+    border-radius: 50%;
+    position: absolute;
+    overflow: hidden;
+  }
+
+  .hours {
     width:400px;
     height:400px;
-    border-radius: 50%;
-    position: relative;
+    top: 10px;
+    left: 10px;
+  }
+
+  .minutes {
+    border: dotted 1px black;
+    width:300px;
+    height:300px;
+    top: 60px;
+    left: 60px;
+  }
+
+  .seconds {
+
+  }
+
+
+  .hour, .minute, .second {
     overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%; height: 50%;
+    transform-origin: 0% 100%;
+    border: solid 1px black;
+    opacity: 0.5;
 
-    .hour {
-      overflow: hidden;
+    &:nth-child(1) {
+      transform: rotate(-15deg) skewY(-60deg);
+    }
+    &:nth-child(2) {
+      transform: rotate(15deg) skewY(-60deg);
+    }
+    &:nth-child(3) {
+      transform: rotate(45deg) skewY(-60deg);
+    }
+    &:nth-child(4) {
+      transform: rotate(75deg) skewY(-60deg);
+    }
+    &:nth-child(5) {
+      transform: rotate(105deg) skewY(-60deg);
+    }
+    &:nth-child(6) {
+      transform: rotate(135deg) skewY(-60deg);
+    }
+    &:nth-child(7) {
+      transform: rotate(165deg) skewY(-60deg);
+    }
+    &:nth-child(8) {
+      transform: rotate(195deg) skewY(-60deg);
+    }
+    &:nth-child(9) {
+      transform: rotate(225deg) skewY(-60deg);
+    }
+    &:nth-child(10) {
+      transform: rotate(255deg) skewY(-60deg);
+    }
+    &:nth-child(11) {
+      transform: rotate(285deg) skewY(-60deg);
+    }
+    &:nth-child(12) {
+      transform: rotate(315deg) skewY(-60deg);
+    }
+
+    .contents {
+      transform: skewY(60deg) rotate(15deg); /* unskew slice contents */
       position: absolute;
-      top: 0;
-      right: 0;
-      width: 50%; height: 50%;
-      transform-origin: 0% 100%;
-      border: solid 1px black;
-      opacity: 0.5;
-
-      &:nth-child(1) {
-        transform: rotate(-15deg) skewY(-60deg);
-      }
-      &:nth-child(2) {
-        transform: rotate(15deg) skewY(-60deg);
-      }
-      &:nth-child(3) {
-        transform: rotate(45deg) skewY(-60deg);
-      }
-      &:nth-child(4) {
-        transform: rotate(75deg) skewY(-60deg);
-      }
-      &:nth-child(5) {
-        transform: rotate(105deg) skewY(-60deg);
-      }
-      &:nth-child(6) {
-        transform: rotate(135deg) skewY(-60deg);
-      }
-      &:nth-child(7) {
-        transform: rotate(165deg) skewY(-60deg);
-      }
-      &:nth-child(8) {
-        transform: rotate(195deg) skewY(-60deg);
-      }
-      &:nth-child(9) {
-        transform: rotate(225deg) skewY(-60deg);
-      }
-      &:nth-child(10) {
-        transform: rotate(255deg) skewY(-60deg);
-      }
-      &:nth-child(11) {
-        transform: rotate(285deg) skewY(-60deg);
-      }
-      &:nth-child(12) {
-        transform: rotate(315deg) skewY(-60deg);
-      }
-
-      .contents {
-        transform: skewY(60deg) rotate(15deg); /* unskew slice contents */
-        position: absolute;
-        left: 0%;
-        width: 20%;
-        height: 10%;
-        top: 46%;
-        left: 13%;
-        text-align: center;
-      }
-
-      .minute, .second {
-
-      }
-
-      .minute {
-
-      }
-
-      .second {
-
-      }
+      left: 0%;
+      width: 20%;
+      height: 10%;
+      top: 46%;
+      left: 13%;
+      text-align: center;
     }
   }
 }

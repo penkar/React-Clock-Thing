@@ -1,5 +1,4 @@
 import React from 'react';
-
 export function Hour(hours) {
   return (
     <div className='hours' style={{transform:`rotate(-${360* hours / 43200}deg)`}}>
