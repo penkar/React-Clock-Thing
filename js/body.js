@@ -25,4 +25,4 @@ setInterval(function(){
     <Body />,
     document.getElementById('mount')
   );
-}, 1000 );
+}, 500 );
