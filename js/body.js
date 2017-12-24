@@ -1,6 +1,8 @@
-import React from 'react'
+import React from 'react';
+require('./style.scss');
+
 import {render} from 'react-dom';
-import {Nooka, Millimetro} from './components'
+import {Nooka, Millimetro} from './components';
 
 class Body extends React.Component {
   constructor(props) {
@@ -10,19 +12,23 @@ class Body extends React.Component {
     }
   }
   render() {
+    let element;
     switch (this.state.clock) {
       case 'millimetro':
-        return Millimetro(new Date());
+        element = Millimetro(new Date()); break;
       case 'nooka':
       default:
-        return Nooka(new Date());
+        element = Nooka(new Date()); break;
     }
+    return [element, <span className='btn' onClick={this.tag}/>]
+  }
+  tag = () => {
+    let labels = ['millimetro', 'nooka'], {clock} = this.state;
+    let idx = (labels.indexOf(clock) + 1) % labels.length;
+    this.setState({clock: labels[idx]});
   }
 }
 
 setInterval(function(){
-  render(
-    <Body />,
-    document.getElementById('mount')
-  );
+  render(<Body />, document.getElementById('mount'));
 }, 500 );
